@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:firebase_app_check/firebase_app_check.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth_test/screens/home.dart';
@@ -87,19 +88,20 @@ class AuthMethods {
     return res;
   }
 
-  Future<UserModel> getUserDetails() async {
-    final SharedPreferences prefs = await _prefs;
+  Future<User?> getUserDetails() async {
+  //   final SharedPreferences prefs = await _prefs;
    
-   var name= await prefs.getString('name');
-   var email= await prefs.getString('email');
-   var phone= await prefs.getString('phone');
-   var image= await prefs.getString('image');
-   final newUser =UserModel(fullName: name,email: email,mobileNumber: phone,image: image);
-   return newUser;
+  //  var name= await prefs.getString('name');
+  //  var email= await prefs.getString('email');
+  //  var phone= await prefs.getString('phone');
+  //  var image= await prefs.getString('image');
+  //  final newUser =UserModel(fullName: name,email: email,mobileNumber: phone,image: image);
+   return _auth.currentUser ;
+   //return newUser;
   }
 
   logoutUser() async {
-    await _auth.signOut().then((value) => Get.offAll(() => LoginPage()));
+    await _auth.signOut().then((value) => Get.off(() => LoginPage()));
   }
 
   googleSignIn() async {
