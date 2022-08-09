@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "459556672180",
+    "project_id": "test-auth-baf84",
+    "storage_bucket": "test-auth-baf84.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459556672180:android:1beb6391b4b21308017de1",
+        "android_client_info": {
+          "package_name": "com.example.firebase_auth_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "459556672180-6duka18484q80bg7bprum5697bhftgiu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxNAms38d6AidM9nqIKdnSqovbAdSnm1s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "459556672180-6duka18484q80bg7bprum5697bhftgiu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
